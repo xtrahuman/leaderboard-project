@@ -1,0 +1,80 @@
+body {
+  background-color: #eff6fb;
+  color: #081621;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  flex-direction: column;
+  margin: auto;
+}
+
+.score-container {
+  display: flex;
+  width: 80%;
+}
+
+.score-board {
+  flex-basis: 48%;
+  margin-right: 20px;
+}
+
+.recent-scores {
+  background-color: #fff;
+  filter: drop-shadow(0 8px 16px rgb(74, 156, 211, 0.48));
+  border-radius: 5px;
+}
+
+form {
+  flex-basis: 48%;
+  margin-left: 20px;
+}
+
+.score-name {
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 5px;
+}
+
+.score-list {
+  padding: 15px;
+}
+
+.score-list p {
+  margin: 0;
+}
+
+.score-list:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+#scores-form div {
+  width: 60%;
+}
+
+#player,
+#scores {
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 95%;
+  height: 25px;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: end;
+}
