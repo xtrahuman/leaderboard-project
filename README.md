@@ -20,7 +20,7 @@ Demo view                                |  static view
 ## Procedure to clone project
 - open your terminal
 - type git clone https://github.com/xtrahuman/leaderboard-project.git
-- type cd To-do-list to change directory to the folder of the project
+- type cd leadeboard-project to change directory to the folder of the project
 - in your terminal, type 'npm install' to install app dependencies
 - 'npm run build' in your terminal to build the project.
 - navigate to index.html inside the dist directory
