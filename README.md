@@ -5,6 +5,11 @@
 ## Description
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
+Demo view                                |  static view
+:---------------------------------------:|:---------------------------------------:
+![](./public/Animation.gif)              |  ![](./public/screenshot.PNG)
+
+
 ## Built With
 
 - html
@@ -24,7 +29,7 @@
 ## project link
 click on the website to view project
 
-- link to website: [upcoming](https://xtrahuman.github.io/leaderboard-project/)
+- link to website: [click here](https://xtrahuman.github.io/leaderboard-project/)
 
 ## Author 1
 
