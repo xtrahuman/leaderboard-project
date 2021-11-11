@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/xtrahuman/leaderboard-project#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",

@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/api.js":
+/*!********************!*\
+  !*** ./src/api.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ collectScores)\n/* harmony export */ });\nconst url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/yeVq8ZiDtb23FVacNTmG/scores'\r\nconst add = document.getElementById('scores-form');\r\nconst refresh = document.getElementById('refresh');\r\n\r\nconst collectScores = async () => {\r\n    const response = await fetch(url, {\r\n     method: 'GET',\r\n     headers: {\r\n       'Content-type': 'application/json; charset=UTF-8',\r\n     },\r\n   }) \r\n   const data = await response.json()\r\n   return data.result\r\n   }\r\n  \r\n   refresh.addEventListener('click',collectScores)\r\n  \r\n   let userName = document.getElementById('player').value = '';\r\n   let score = document.getElementById('scores').value = '';\r\n  \r\n   const submitScores = async (e) => {\r\n     e.preventDefault()\r\n     \r\n    const response = await fetch(url, {\r\n     method: 'POST',\r\n     body:JSON.stringify({\r\n      user: userName, \r\n       score: score\r\n      }),\r\n     headers: {\r\n       'Content-type': 'application/json; charset=UTF-8',\r\n     },\r\n   }) \r\n   const data = await response.json()\r\n   console.log(data.result)\r\n   }\r\n  \r\n   add.addEventListener('submit',submitScores);\r\n\r\n   \r\n\n\n//# sourceURL=webpack://leaderboard-project/./src/api.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\nconst leaderScore = document.querySelector('.recent-scores');\nconst arr = [];\n\nclass Scores {\n  constructor(name, score) {\n    this.name = name;\n    this.score = score;\n  }\n\ndisplayScores = (scoreOutput) => {\n  const allscore = scoreOutput.map((eachScore) => `<div class=\"score-list\">\n<p>${eachScore.name}: ${eachScore.score}</p>\n</div>\n`);\n  leaderScore.innerHTML = allscore.join('');\n}\n}\n\nconst InputScores = (names, newScores) => {\n  const newPlayer = new Scores(names, newScores);\n  arr.push(newPlayer);\n  newPlayer.displayScores(arr);\n};\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  InputScores('john', 21);\n  InputScores('peter', 40);\n  InputScores('ade', 50);\n  InputScores('miracle', 50);\n});\n\n\n//# sourceURL=webpack://leaderboard-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./api.js */ \"./src/api.js\");\n\n\n\nconst leaderScore = document.querySelector('.recent-scores');\nconst arr = [];\n\nconsole.log((0,_api_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])())\n// class Scores {\n//   constructor(name, score) {\n//     this.name = name;\n//     this.score = score;\n//   }\n\n const displayScores = (scoreOutput) => {\n  const allscore = scoreOutput.map((eachScore) => `<div class=\"score-list\">\n<p>${eachScore.user}: ${eachScore.score}</p>\n</div>\n`);\n  leaderScore.innerHTML = allscore.join('');\n}\n// }\n\n// const InputScores = (names, newScores) => {\n//   const newPlayer = new Scores(names, newScores);\n//   arr.push(newPlayer);\n//   newPlayer.displayScores(arr);\n// };\n\n// window.addEventListener('DOMContentLoaded', () => {\n//   InputScores('john', 21);\n//   InputScores('peter', 40);\n//   InputScores('ade', 50);\n//   InputScores('miracle', 50);\n\n// });\n\n\n\n\n\n\n\n//# sourceURL=webpack://leaderboard-project/./src/index.js?");
 
 /***/ })
 
