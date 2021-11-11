@@ -24,7 +24,7 @@ Demo view                                |  static view
 - in your terminal, type 'npm install' to install app dependencies
 - 'npm run build' in your terminal to build the project.
 - navigate to index.html inside the dist directory
-- open with live server or type alt l o then select dist if live-server is installed in your vscode.
+- open with live server, type 'npm run start' in your terminal.
 
 ## project link
 click on the website to view project
