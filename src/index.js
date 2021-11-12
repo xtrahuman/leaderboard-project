@@ -8,6 +8,7 @@ const refresh = document.getElementById('refresh');
 add.addEventListener('submit', () => {
   document.getElementById('player').value = '';
   document.getElementById('scores').value = '';
+  refresh.classList.remove('turn');
 });
 
 const displayScores = (scoreOutput) => {
@@ -27,4 +28,11 @@ const collect = async () => {
 
 collect();
 
-refresh.addEventListener('click', collect);
+function newFunction() {
+  refresh.classList.add('turn');
+}
+
+refresh.addEventListener('click', () => {
+  collect();
+  newFunction();
+});

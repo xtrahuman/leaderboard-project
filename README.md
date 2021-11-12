@@ -5,6 +5,11 @@
 ## Description
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
+Demo view                                |  static view
+:---------------------------------------:|:---------------------------------------:
+![](./public/Animation.gif)              |  ![](./public/screenshot.PNG)
+
+
 ## Built With
 
 - html
@@ -15,16 +20,16 @@
 ## Procedure to clone project
 - open your terminal
 - type git clone https://github.com/xtrahuman/leaderboard-project.git
-- type cd To-do-list to change directory to the folder of the project
+- type cd leaderboard-project to change directory to the folder of the project
 - in your terminal, type 'npm install' to install app dependencies
 - 'npm run build' in your terminal to build the project.
 - navigate to index.html inside the dist directory
-- open with live server or type alt l o then select dist if live-server is installed in your vscode.
+- open with live server, type 'npm run start' in your terminal.
 
 ## project link
 click on the website to view project
 
-- link to website: [upcoming](https://xtrahuman.github.io/leaderboard-project/)
+- link to website: [click here](https://xtrahuman.github.io/leaderboard-project/)
 
 ## Author 1
 
